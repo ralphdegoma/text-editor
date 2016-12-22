@@ -1,0 +1,12 @@
+
+<div class="editor" id="editor" editor>
+
+	<div class="rows"  contenteditable="true">
+		
+		<div ng-repeat="text in textList track by $index"  id="{{$index}}" linecode>
+			{{text}}
+		</div>
+
+	</div>	
+
+</div>

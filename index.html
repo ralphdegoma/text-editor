@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="textEditor">
+<head>
+	<title>Text Editor</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-controller="EditorController">
+
+
+<div ui-view></div>
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+<script src="app/controllers/editorController.js"></script>
+<script src="app/services/editorServices.js"></script>
+<script src="app/directives/editorDirectives.js"></script>
+<script src="app/routes/route-config.js"></script>
+
+
+<script src="app/app.js"></script>	
+
+</body>
+</html>

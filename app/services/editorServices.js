@@ -1,0 +1,9 @@
+
+function EditorServices(){
+	
+	return {
+		textList : []
+	}
+	
+
+}

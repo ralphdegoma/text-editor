@@ -1,11 +1,17 @@
 
 <div class="editor" id="editor" editor>
 
+	<div class="line-numbers">
+		<div class="number" ng-repeat="text in textList track by $index" style="height:18px">{{$index + 1}}</div>
+	</div>
+
 	<div class="rows"  contenteditable="true">
 		
-		<div ng-repeat="text in textList track by $index"  id="{{$index}}" linecode>
-			{{text}}
+		<div style="height:18px" class="code" codeline >
+			
 		</div>
+
+
 
 	</div>	
 

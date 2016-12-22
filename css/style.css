@@ -13,3 +13,12 @@
 	display: block;
 
 }
+
+.line-numbers{
+	width: 20px;
+	border:1px solid blue;
+	height:auto;
+	position: absolute;
+	padding:0px auto;
+	margin-left: -22px;
+}

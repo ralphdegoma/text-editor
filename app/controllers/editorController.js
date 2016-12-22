@@ -13,14 +13,32 @@ function EditorController($scope,$state,$http,EditorServices) {
 
 	$scope.storeKeys = function(element,event){
 
-		var lists = element[0].children[0].children;
-		$scope.textListCopy = lists;
-		$scope.$apply();
+	
+
+		if(event.keyCode == 13){
+            
+            // /event.preventDefault();
+            $scope.textList.push("");
+        }
+
+        
+
+        var lists = document.getElementsByClassName('rows')[0].children;
+		
+		
+		for(var i = 0; i < lists.length; i++){
+			
+			$scope.textList[i] = lists[i];
+			
+		}
+		
+
+		
+
 	}
 
 
 
 
 }
-
 

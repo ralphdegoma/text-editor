@@ -19,11 +19,27 @@ app.directive('editor', function() {
 
             });
 
-            element[0].addEventListener("keypress", function(event){ 
-                $scope.storeKeys(element,event);
+            element[0].addEventListener("keydown", function(event){ 
+                
+                $scope.$apply(function(){
+                    $scope.storeKeys(element,event);
+                });
+                
+
             });
             
-        
+            document.addEventListener("keydown", function(event){ 
+                
+                
+                if(event.keyCode == 9){
+                  
+                    event.preventDefault();
+
+                }
+
+                
+            });
+
 
         }
     }
@@ -31,17 +47,20 @@ app.directive('editor', function() {
 
 
 
-app.directive('linecode', function() {
+app.directive('codeline', function() {
     return {
         restrict: 'A',
         link: function($scope, element, attrs) {
             
-            element[0].addEventListener("keypress", function(event){ 
-                console.log("sdd")
-                $scope.storeKeys(element,event);
-                
-            });
+            
+            //hljs.highlightBlock(element[0]);
+            
+           /* hljs.configure({useBR: true});
+            
+         */
 
         }
     }
 });
+
+
